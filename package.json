@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-dumi-api-parser",
-  "author": "Guo Zile <guozile@corp.netease.com>",
+  "author": "Guo Zile <zlguo1996@gmail.com>",
   "version": "0.0.1",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -10,8 +10,8 @@
   },
   "keywords": [],
   "authors": {
-    "name": "Guo Zile <guozile@corp.netease.com>",
-    "email": "guozile@corp.netease.com"
+    "name": "Guo Zile <zlguo1996@gmail.com>",
+    "email": "zlguo1996@gmail.com"
   },
   "license": "MIT",
   "files": [
