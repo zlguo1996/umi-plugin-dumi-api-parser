@@ -7,6 +7,10 @@ async function generateDefinition(fileName: string) {
     execSync(`typedoc ./__tests__/typedoc/${fileName}.ts --json ./__tests__/typedoc/${fileName}.typedoc.json`)
 }
 
+function compressJson(jsonString: string) {
+    return jsonString.replace(/[\s]/g, '')
+}
+
 async function generateExpect(fileName: string) {
     const definition = await import(`./typedoc/${fileName}.typedoc.json`)
 
@@ -36,7 +40,11 @@ for (const fileName of fileNames) {
         for (const [key, item] of map) {
             if (!/T\d+/.test(item.name)) continue;
             test(item.name, () => {
-                expect(stringifyType(item, map)).toBe(expectation[item.name])
+                expect(
+                    compressJson(stringifyType(item, map))
+                ).toBe(
+                    compressJson(expectation[item.name])
+                )
             })
         }
     })

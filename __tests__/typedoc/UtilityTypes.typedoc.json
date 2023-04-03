@@ -30,7 +30,8 @@
 								{
 									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 2,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L2"
 								}
 							],
 							"type": {
@@ -48,7 +49,8 @@
 								{
 									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 3,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L3"
 								}
 							],
 							"type": {
@@ -70,7 +72,8 @@
 						{
 							"fileName": "__tests__/typedoc/UtilityTypes.ts",
 							"line": 1,
-							"character": 10
+							"character": 10,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L1"
 						}
 					]
 				},
@@ -91,7 +94,8 @@
 								{
 									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 7,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L7"
 								}
 							],
 							"type": {
@@ -111,7 +115,8 @@
 								{
 									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 8,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L8"
 								}
 							],
 							"type": {
@@ -129,7 +134,8 @@
 								{
 									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 9,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L9"
 								}
 							],
 							"type": {
@@ -153,7 +159,8 @@
 						{
 							"fileName": "__tests__/typedoc/UtilityTypes.ts",
 							"line": 6,
-							"character": 10
+							"character": 10,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L6"
 						}
 					]
 				},
@@ -167,7 +174,8 @@
 						{
 							"fileName": "__tests__/typedoc/UtilityTypes.ts",
 							"line": 12,
-							"character": 5
+							"character": 5,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L12"
 						}
 					],
 					"type": {
@@ -182,7 +190,8 @@
 								{
 									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 12,
-									"character": 9
+									"character": 9,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L12"
 								}
 							],
 							"signatures": [
@@ -817,7 +826,8 @@
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 14,
-					"character": 12
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L14"
 				}
 			],
 			"type": {
@@ -845,8 +855,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 15,
-					"character": 12
+					"line": 16,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L16"
 				}
 			],
 			"type": {
@@ -886,8 +897,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 16,
-					"character": 12
+					"line": 17,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L17"
 				}
 			],
 			"type": {
@@ -927,8 +939,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 18,
-					"character": 12
+					"line": 19,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L19"
 				}
 			],
 			"type": {
@@ -955,8 +968,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 19,
-					"character": 12
+					"line": 20,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L20"
 				}
 			],
 			"type": {
@@ -983,8 +997,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 20,
-					"character": 12
+					"line": 22,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L22"
 				}
 			],
 			"type": {
@@ -1009,8 +1024,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 21,
-					"character": 12
+					"line": 23,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L23"
 				}
 			],
 			"type": {
@@ -1041,8 +1057,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 22,
-					"character": 12
+					"line": 24,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L24"
 				}
 			],
 			"type": {
@@ -1062,8 +1079,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 23,
-					"character": 12
+					"line": 25,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L25"
 				}
 			],
 			"type": {
@@ -1088,8 +1106,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 24,
-					"character": 12
+					"line": 26,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L26"
 				}
 			],
 			"type": {
@@ -1114,8 +1133,9 @@
 			"sources": [
 				{
 					"fileName": "__tests__/typedoc/UtilityTypes.ts",
-					"line": 25,
-					"character": 12
+					"line": 27,
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L27"
 				}
 			],
 			"type": {
@@ -1160,7 +1180,8 @@
 		{
 			"fileName": "__tests__/typedoc/UtilityTypes.ts",
 			"line": 1,
-			"character": 0
+			"character": 0,
+			"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/234ea8b/__tests__/typedoc/UtilityTypes.ts#L1"
 		}
 	]
 }
