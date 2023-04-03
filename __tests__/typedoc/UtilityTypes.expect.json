@@ -1,0 +1,13 @@
+{
+    "T01": "{a1: number; a2: string; b1: number; b2?: string; b3: {a1: number; a2: string}}",
+    "T02": "{b1: number; b2?: string}",
+    "T03": "{b3: {a1: number; a2: string}}",
+    "T04": "[number, string]",
+    "T05": "{b1: number; b2?: string; b3: {a1: number; a2: string}}",
+    "T06": "number",
+    "T07": "[string, number, {b1: number; b2?: string; b3: {a1: number; a2: string}}]",
+    "T08": "number[]",
+    "T09": "string | undefined",
+    "T10": "{a1: number; a2: string}",
+    "T11": "number"
+}

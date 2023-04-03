@@ -85,7 +85,7 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
             return {
                 "kind": 256,
                 "kindString": "Interface",
-                children: typeArguments[0].children.filter((child: any) => typeArguments[1].children.map((c: any) => c.name).includes(child.name)).map(
+                children: typeArguments[0].children.filter((child: any) => typeArguments[1].types.map((c: any) => c.value).includes(child.name)).map(
                     (child: any) => {
                         return flattenUtilityType(child, ref)
                     }
@@ -96,7 +96,7 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
             return {
                 "kind": 256,
                 "kindString": "Interface",
-                children: typeArguments[0].children.filter((child: any) => !typeArguments[1].children.map((c: any) => c.name).includes(child.name)).map(
+                children: typeArguments[0].children.filter((child: any) => !typeArguments[1].types.map((c: any) => c.value).includes(child.name)).map(
                     (child: any) => {
                         return flattenUtilityType(child, ref)
                     }

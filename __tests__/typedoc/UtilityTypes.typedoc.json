@@ -1,34 +1,34 @@
 {
 	"id": 0,
-	"name": "@music/rn-pearl",
+	"name": "umi-plugin-dumi-api-parser",
 	"kind": 1,
 	"kindString": "Project",
 	"flags": {},
 	"originalName": "",
 	"children": [
 		{
-			"id": 11,
+			"id": 12,
 			"name": "<internal>",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 12,
+					"id": 13,
 					"name": "A",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 13,
+							"id": 14,
 							"name": "a1",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/typedoc/UtilityTypes.ts",
+									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 2,
 									"character": 4
 								}
@@ -39,14 +39,14 @@
 							}
 						},
 						{
-							"id": 14,
+							"id": 15,
 							"name": "a2",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/typedoc/UtilityTypes.ts",
+									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 3,
 									"character": 4
 								}
@@ -61,35 +61,35 @@
 						{
 							"title": "Properties",
 							"children": [
-								13,
-								14
+								14,
+								15
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "src/typedoc/UtilityTypes.ts",
+							"fileName": "__tests__/typedoc/UtilityTypes.ts",
 							"line": 1,
 							"character": 10
 						}
 					]
 				},
 				{
-					"id": 15,
+					"id": 16,
 					"name": "B",
 					"kind": 256,
 					"kindString": "Interface",
 					"flags": {},
 					"children": [
 						{
-							"id": 16,
+							"id": 17,
 							"name": "b1",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/typedoc/UtilityTypes.ts",
+									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 7,
 									"character": 4
 								}
@@ -100,7 +100,7 @@
 							}
 						},
 						{
-							"id": 17,
+							"id": 18,
 							"name": "b2",
 							"kind": 1024,
 							"kindString": "Property",
@@ -109,7 +109,7 @@
 							},
 							"sources": [
 								{
-									"fileName": "src/typedoc/UtilityTypes.ts",
+									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 8,
 									"character": 4
 								}
@@ -120,21 +120,21 @@
 							}
 						},
 						{
-							"id": 18,
+							"id": 19,
 							"name": "b3",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/typedoc/UtilityTypes.ts",
+									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 9,
 									"character": 4
 								}
 							],
 							"type": {
 								"type": "reference",
-								"id": 12,
+								"id": 13,
 								"name": "A"
 							}
 						}
@@ -143,29 +143,29 @@
 						{
 							"title": "Properties",
 							"children": [
-								16,
 								17,
-								18
+								18,
+								19
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "src/typedoc/UtilityTypes.ts",
+							"fileName": "__tests__/typedoc/UtilityTypes.ts",
 							"line": 6,
 							"character": 10
 						}
 					]
 				},
 				{
-					"id": 33,
+					"id": 34,
 					"name": "C",
 					"kind": 4194304,
 					"kindString": "Type alias",
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "src/typedoc/UtilityTypes.ts",
+							"fileName": "__tests__/typedoc/UtilityTypes.ts",
 							"line": 12,
 							"character": 5
 						}
@@ -173,28 +173,28 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 34,
+							"id": 35,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "src/typedoc/UtilityTypes.ts",
+									"fileName": "__tests__/typedoc/UtilityTypes.ts",
 									"line": 12,
 									"character": 9
 								}
 							],
 							"signatures": [
 								{
-									"id": 35,
+									"id": 36,
 									"name": "__type",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 36,
+											"id": 37,
 											"name": "c1",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -205,7 +205,7 @@
 											}
 										},
 										{
-											"id": 37,
+											"id": 38,
 											"name": "c2",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -218,7 +218,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 15,
+										"id": 16,
 										"name": "B"
 									}
 								}
@@ -227,7 +227,7 @@
 					}
 				},
 				{
-					"id": 46,
+					"id": 47,
 					"name": "Exclude",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -245,13 +245,13 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 1584,
+							"line": 1593,
 							"character": 5
 						}
 					],
 					"typeParameters": [
 						{
-							"id": 47,
+							"id": 48,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -260,7 +260,7 @@
 							}
 						},
 						{
-							"id": 48,
+							"id": 49,
 							"name": "U",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -273,14 +273,14 @@
 						"type": "conditional",
 						"checkType": {
 							"type": "reference",
-							"id": 47,
+							"id": 48,
 							"name": "T",
 							"qualifiedName": "T",
 							"package": "typescript"
 						},
 						"extendsType": {
 							"type": "reference",
-							"id": 48,
+							"id": 49,
 							"name": "U",
 							"qualifiedName": "U",
 							"package": "typescript"
@@ -291,7 +291,7 @@
 						},
 						"falseType": {
 							"type": "reference",
-							"id": 47,
+							"id": 48,
 							"name": "T",
 							"qualifiedName": "T",
 							"package": "typescript"
@@ -299,7 +299,7 @@
 					}
 				},
 				{
-					"id": 22,
+					"id": 23,
 					"name": "Omit",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -317,13 +317,13 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 1594,
+							"line": 1603,
 							"character": 5
 						}
 					],
 					"typeParameters": [
 						{
-							"id": 23,
+							"id": 24,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -332,7 +332,7 @@
 							}
 						},
 						{
-							"id": 24,
+							"id": 25,
 							"name": "K",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -351,25 +351,25 @@
 					],
 					"type": {
 						"type": "reference",
-						"id": 19,
+						"id": 20,
 						"typeArguments": [
 							{
 								"type": "reference",
-								"id": 23,
+								"id": 24,
 								"name": "T",
 								"qualifiedName": "T",
 								"package": "typescript"
 							},
 							{
 								"type": "reference",
-								"id": 46,
+								"id": 47,
 								"typeArguments": [
 									{
 										"type": "typeOperator",
 										"operator": "keyof",
 										"target": {
 											"type": "reference",
-											"id": 23,
+											"id": 24,
 											"name": "T",
 											"qualifiedName": "T",
 											"package": "typescript"
@@ -377,7 +377,7 @@
 									},
 									{
 										"type": "reference",
-										"id": 24,
+										"id": 25,
 										"name": "K",
 										"qualifiedName": "K",
 										"package": "typescript"
@@ -394,7 +394,7 @@
 					}
 				},
 				{
-					"id": 25,
+					"id": 26,
 					"name": "Parameters",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -412,13 +412,13 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 1604,
+							"line": 1613,
 							"character": 5
 						}
 					],
 					"typeParameters": [
 						{
-							"id": 32,
+							"id": 33,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -428,7 +428,7 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 29,
+									"id": 30,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
@@ -438,13 +438,13 @@
 									"sources": [
 										{
 											"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-											"line": 1604,
+											"line": 1613,
 											"character": 26
 										}
 									],
 									"signatures": [
 										{
-											"id": 30,
+											"id": 31,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
@@ -453,7 +453,7 @@
 											},
 											"parameters": [
 												{
-													"id": 31,
+													"id": 32,
 													"name": "args",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -481,7 +481,7 @@
 						"type": "conditional",
 						"checkType": {
 							"type": "reference",
-							"id": 32,
+							"id": 33,
 							"name": "T",
 							"qualifiedName": "T",
 							"package": "typescript"
@@ -489,7 +489,7 @@
 						"extendsType": {
 							"type": "reflection",
 							"declaration": {
-								"id": 26,
+								"id": 27,
 								"name": "__type",
 								"kind": 65536,
 								"kindString": "Type literal",
@@ -499,13 +499,13 @@
 								"sources": [
 									{
 										"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-										"line": 1604,
+										"line": 1613,
 										"character": 61
 									}
 								],
 								"signatures": [
 									{
-										"id": 27,
+										"id": 28,
 										"name": "__type",
 										"kind": 4096,
 										"kindString": "Call signature",
@@ -514,7 +514,7 @@
 										},
 										"parameters": [
 											{
-												"id": 28,
+												"id": 29,
 												"name": "args",
 												"kind": 32768,
 												"kindString": "Parameter",
@@ -549,7 +549,7 @@
 					}
 				},
 				{
-					"id": 19,
+					"id": 20,
 					"name": "Pick",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -567,13 +567,13 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 1570,
+							"line": 1579,
 							"character": 5
 						}
 					],
 					"typeParameters": [
 						{
-							"id": 20,
+							"id": 21,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -582,7 +582,7 @@
 							}
 						},
 						{
-							"id": 21,
+							"id": 22,
 							"name": "K",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -594,7 +594,7 @@
 								"operator": "keyof",
 								"target": {
 									"type": "reference",
-									"id": 20,
+									"id": 21,
 									"name": "T",
 									"qualifiedName": "T",
 									"package": "typescript"
@@ -607,7 +607,7 @@
 						"parameter": "P",
 						"parameterType": {
 							"type": "reference",
-							"id": 21,
+							"id": 22,
 							"name": "K",
 							"qualifiedName": "K",
 							"package": "typescript"
@@ -622,7 +622,7 @@
 							},
 							"objectType": {
 								"type": "reference",
-								"id": 20,
+								"id": 21,
 								"name": "T",
 								"qualifiedName": "T",
 								"package": "typescript"
@@ -631,7 +631,7 @@
 					}
 				},
 				{
-					"id": 38,
+					"id": 39,
 					"name": "ReturnType",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -649,13 +649,13 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 1614,
+							"line": 1623,
 							"character": 5
 						}
 					],
 					"typeParameters": [
 						{
-							"id": 45,
+							"id": 46,
 							"name": "T",
 							"kind": 131072,
 							"kindString": "Type parameter",
@@ -665,7 +665,7 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 42,
+									"id": 43,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
@@ -675,13 +675,13 @@
 									"sources": [
 										{
 											"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-											"line": 1614,
+											"line": 1623,
 											"character": 26
 										}
 									],
 									"signatures": [
 										{
-											"id": 43,
+											"id": 44,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
@@ -690,7 +690,7 @@
 											},
 											"parameters": [
 												{
-													"id": 44,
+													"id": 45,
 													"name": "args",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -718,7 +718,7 @@
 						"type": "conditional",
 						"checkType": {
 							"type": "reference",
-							"id": 45,
+							"id": 46,
 							"name": "T",
 							"qualifiedName": "T",
 							"package": "typescript"
@@ -726,7 +726,7 @@
 						"extendsType": {
 							"type": "reflection",
 							"declaration": {
-								"id": 39,
+								"id": 40,
 								"name": "__type",
 								"kind": 65536,
 								"kindString": "Type literal",
@@ -736,13 +736,13 @@
 								"sources": [
 									{
 										"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-										"line": 1614,
+										"line": 1623,
 										"character": 61
 									}
 								],
 								"signatures": [
 									{
-										"id": 40,
+										"id": 41,
 										"name": "__type",
 										"kind": 4096,
 										"kindString": "Call signature",
@@ -751,7 +751,7 @@
 										},
 										"parameters": [
 											{
-												"id": 41,
+												"id": 42,
 												"name": "args",
 												"kind": 32768,
 												"kindString": "Parameter",
@@ -790,32 +790,32 @@
 				{
 					"title": "Interfaces",
 					"children": [
-						12,
-						15
+						13,
+						16
 					]
 				},
 				{
 					"title": "Type Aliases",
 					"children": [
-						33,
-						46,
-						22,
-						25,
-						19,
-						38
+						34,
+						47,
+						23,
+						26,
+						20,
+						39
 					]
 				}
 			]
 		},
 		{
 			"id": 1,
-			"name": "T1",
+			"name": "T01",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 14,
 					"character": 12
 				}
@@ -825,63 +825,37 @@
 				"types": [
 					{
 						"type": "reference",
-						"id": 12,
+						"id": 13,
 						"name": "A"
 					},
 					{
 						"type": "reference",
-						"id": 15,
+						"id": 16,
 						"name": "B"
 					}
 				]
 			}
 		},
 		{
-			"id": 10,
-			"name": "T10",
-			"kind": 4194304,
-			"kindString": "Type alias",
-			"flags": {},
-			"sources": [
-				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
-					"line": 24,
-					"character": 12
-				}
-			],
-			"type": {
-				"type": "indexedAccess",
-				"indexType": {
-					"type": "literal",
-					"value": "b3"
-				},
-				"objectType": {
-					"type": "reference",
-					"id": 15,
-					"name": "B"
-				}
-			}
-		},
-		{
 			"id": 2,
-			"name": "T2",
+			"name": "T02",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 15,
 					"character": 12
 				}
 			],
 			"type": {
 				"type": "reference",
-				"id": 19,
+				"id": 20,
 				"typeArguments": [
 					{
 						"type": "reference",
-						"id": 15,
+						"id": 16,
 						"name": "B"
 					},
 					{
@@ -905,24 +879,24 @@
 		},
 		{
 			"id": 3,
-			"name": "T3",
+			"name": "T03",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 16,
 					"character": 12
 				}
 			],
 			"type": {
 				"type": "reference",
-				"id": 22,
+				"id": 23,
 				"typeArguments": [
 					{
 						"type": "reference",
-						"id": 15,
+						"id": 16,
 						"name": "B"
 					},
 					{
@@ -946,24 +920,24 @@
 		},
 		{
 			"id": 4,
-			"name": "T4",
+			"name": "T04",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 18,
 					"character": 12
 				}
 			],
 			"type": {
 				"type": "reference",
-				"id": 25,
+				"id": 26,
 				"typeArguments": [
 					{
 						"type": "reference",
-						"id": 33,
+						"id": 34,
 						"name": "C"
 					}
 				],
@@ -974,24 +948,24 @@
 		},
 		{
 			"id": 5,
-			"name": "T5",
+			"name": "T05",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 19,
 					"character": 12
 				}
 			],
 			"type": {
 				"type": "reference",
-				"id": 38,
+				"id": 39,
 				"typeArguments": [
 					{
 						"type": "reference",
-						"id": 33,
+						"id": 34,
 						"name": "C"
 					}
 				],
@@ -1002,13 +976,13 @@
 		},
 		{
 			"id": 6,
-			"name": "T6",
+			"name": "T06",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 20,
 					"character": 12
 				}
@@ -1022,19 +996,19 @@
 				"objectType": {
 					"type": "reference",
 					"id": 4,
-					"name": "T4"
+					"name": "T04"
 				}
 			}
 		},
 		{
 			"id": 7,
-			"name": "T7",
+			"name": "T07",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 21,
 					"character": 12
 				}
@@ -1052,7 +1026,7 @@
 					},
 					{
 						"type": "reference",
-						"id": 15,
+						"id": 16,
 						"name": "B"
 					}
 				]
@@ -1060,13 +1034,13 @@
 		},
 		{
 			"id": 8,
-			"name": "T8",
+			"name": "T08",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 22,
 					"character": 12
 				}
@@ -1081,13 +1055,13 @@
 		},
 		{
 			"id": 9,
-			"name": "T9",
+			"name": "T09",
 			"kind": 4194304,
 			"kindString": "Type alias",
 			"flags": {},
 			"sources": [
 				{
-					"fileName": "src/typedoc/UtilityTypes.ts",
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
 					"line": 23,
 					"character": 12
 				}
@@ -1100,8 +1074,60 @@
 				},
 				"objectType": {
 					"type": "reference",
-					"id": 15,
+					"id": 16,
 					"name": "B"
+				}
+			}
+		},
+		{
+			"id": 10,
+			"name": "T10",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
+					"line": 24,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "indexedAccess",
+				"indexType": {
+					"type": "literal",
+					"value": "b3"
+				},
+				"objectType": {
+					"type": "reference",
+					"id": 16,
+					"name": "B"
+				}
+			}
+		},
+		{
+			"id": 11,
+			"name": "T11",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "__tests__/typedoc/UtilityTypes.ts",
+					"line": 25,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "indexedAccess",
+				"indexType": {
+					"type": "literal",
+					"value": 0
+				},
+				"objectType": {
+					"type": "reference",
+					"id": 8,
+					"name": "T08"
 				}
 			}
 		}
@@ -1110,14 +1136,13 @@
 		{
 			"title": "Modules",
 			"children": [
-				11
+				12
 			]
 		},
 		{
 			"title": "Type Aliases",
 			"children": [
 				1,
-				10,
 				2,
 				3,
 				4,
@@ -1125,13 +1150,15 @@
 				6,
 				7,
 				8,
-				9
+				9,
+				10,
+				11
 			]
 		}
 	],
 	"sources": [
 		{
-			"fileName": "src/typedoc/UtilityTypes.ts",
+			"fileName": "__tests__/typedoc/UtilityTypes.ts",
 			"line": 1,
 			"character": 0
 		}

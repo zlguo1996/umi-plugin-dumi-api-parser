@@ -1,32 +1,4 @@
-import { flattenDeep } from 'lodash'
 import flattenUtilityType from './flattenUtilityType';
-import typedocDefRaw from './UtilityTypes.json';
-
-const typedocDef = typedocDefRaw as any
-
-function flatChildrenList(children: any[]): any[] {
-    return children.reduce((acc, child) => {
-        return acc.concat(child, flatChildrenList(child.children || []));
-    }, []);
-}
-
-function checkUniqueIds(list: any[]) {
-    const ids = list.map(l => l.id);
-    const uniqueIds = new Set(ids);
-    if (ids.length !== uniqueIds.size) {
-        throw new Error('Non unique ids');
-    }
-}
-
-function getIdMap(list: any[]) {
-    const map = new Map();
-    list.forEach(l => map.set(l.id, l));
-    return map;
-}
-
-const list = flatChildrenList(typedocDef.children);
-checkUniqueIds(list);
-const map = getIdMap(list);
 
 function stringifyType(item: any, ref: Map<any, any>): string {
     const flattened = flattenUtilityType(item, ref)
@@ -70,4 +42,3 @@ function stringifyType(item: any, ref: Map<any, any>): string {
 }
 
 export default stringifyType
-console.log('>>> p', stringifyType(map.get(10), map));
