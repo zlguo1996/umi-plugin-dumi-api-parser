@@ -1,0 +1,1139 @@
+{
+	"id": 0,
+	"name": "@music/rn-pearl",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 11,
+			"name": "<internal>",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 12,
+					"name": "A",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 13,
+							"name": "a1",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/typedoc/UtilityTypes.ts",
+									"line": 2,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 14,
+							"name": "a2",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/typedoc/UtilityTypes.ts",
+									"line": 3,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								13,
+								14
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/typedoc/UtilityTypes.ts",
+							"line": 1,
+							"character": 10
+						}
+					]
+				},
+				{
+					"id": 15,
+					"name": "B",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 16,
+							"name": "b1",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/typedoc/UtilityTypes.ts",
+									"line": 7,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 17,
+							"name": "b2",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/typedoc/UtilityTypes.ts",
+									"line": 8,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 18,
+							"name": "b3",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/typedoc/UtilityTypes.ts",
+									"line": 9,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 12,
+								"name": "A"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								16,
+								17,
+								18
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/typedoc/UtilityTypes.ts",
+							"line": 6,
+							"character": 10
+						}
+					]
+				},
+				{
+					"id": 33,
+					"name": "C",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/typedoc/UtilityTypes.ts",
+							"line": 12,
+							"character": 5
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 34,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/typedoc/UtilityTypes.ts",
+									"line": 12,
+									"character": 9
+								}
+							],
+							"signatures": [
+								{
+									"id": 35,
+									"name": "__type",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 36,
+											"name": "c1",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 37,
+											"name": "c2",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 15,
+										"name": "B"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 46,
+					"name": "Exclude",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExternal": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Exclude from T those types that are assignable to U"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+							"line": 1584,
+							"character": 5
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 47,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							}
+						},
+						{
+							"id": 48,
+							"name": "U",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							}
+						}
+					],
+					"type": {
+						"type": "conditional",
+						"checkType": {
+							"type": "reference",
+							"id": 47,
+							"name": "T",
+							"qualifiedName": "T",
+							"package": "typescript"
+						},
+						"extendsType": {
+							"type": "reference",
+							"id": 48,
+							"name": "U",
+							"qualifiedName": "U",
+							"package": "typescript"
+						},
+						"trueType": {
+							"type": "intrinsic",
+							"name": "never"
+						},
+						"falseType": {
+							"type": "reference",
+							"id": 47,
+							"name": "T",
+							"qualifiedName": "T",
+							"package": "typescript"
+						}
+					}
+				},
+				{
+					"id": 22,
+					"name": "Omit",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExternal": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Construct a type with the properties of T except for those in type K."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+							"line": 1594,
+							"character": 5
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 23,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							}
+						},
+						{
+							"id": 24,
+							"name": "K",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							},
+							"type": {
+								"type": "typeOperator",
+								"operator": "keyof",
+								"target": {
+									"type": "intrinsic",
+									"name": "any"
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 19,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"id": 23,
+								"name": "T",
+								"qualifiedName": "T",
+								"package": "typescript"
+							},
+							{
+								"type": "reference",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeOperator",
+										"operator": "keyof",
+										"target": {
+											"type": "reference",
+											"id": 23,
+											"name": "T",
+											"qualifiedName": "T",
+											"package": "typescript"
+										}
+									},
+									{
+										"type": "reference",
+										"id": 24,
+										"name": "K",
+										"qualifiedName": "K",
+										"package": "typescript"
+									}
+								],
+								"name": "Exclude",
+								"qualifiedName": "Exclude",
+								"package": "typescript"
+							}
+						],
+						"name": "Pick",
+						"qualifiedName": "Pick",
+						"package": "typescript"
+					}
+				},
+				{
+					"id": 25,
+					"name": "Parameters",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExternal": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Obtain the parameters of a function type in a tuple"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+							"line": 1604,
+							"character": 5
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 32,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 29,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExternal": true
+									},
+									"sources": [
+										{
+											"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"line": 1604,
+											"character": 26
+										}
+									],
+									"signatures": [
+										{
+											"id": 30,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {
+												"isExternal": true
+											},
+											"parameters": [
+												{
+													"id": 31,
+													"name": "args",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isExternal": true,
+														"isRest": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "conditional",
+						"checkType": {
+							"type": "reference",
+							"id": 32,
+							"name": "T",
+							"qualifiedName": "T",
+							"package": "typescript"
+						},
+						"extendsType": {
+							"type": "reflection",
+							"declaration": {
+								"id": 26,
+								"name": "__type",
+								"kind": 65536,
+								"kindString": "Type literal",
+								"flags": {
+									"isExternal": true
+								},
+								"sources": [
+									{
+										"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+										"line": 1604,
+										"character": 61
+									}
+								],
+								"signatures": [
+									{
+										"id": 27,
+										"name": "__type",
+										"kind": 4096,
+										"kindString": "Call signature",
+										"flags": {
+											"isExternal": true
+										},
+										"parameters": [
+											{
+												"id": 28,
+												"name": "args",
+												"kind": 32768,
+												"kindString": "Parameter",
+												"flags": {
+													"isExternal": true,
+													"isRest": true
+												},
+												"type": {
+													"type": "inferred",
+													"name": "P"
+												}
+											}
+										],
+										"type": {
+											"type": "intrinsic",
+											"name": "any"
+										}
+									}
+								]
+							}
+						},
+						"trueType": {
+							"type": "reference",
+							"name": "P",
+							"qualifiedName": "P",
+							"package": "typescript"
+						},
+						"falseType": {
+							"type": "intrinsic",
+							"name": "never"
+						}
+					}
+				},
+				{
+					"id": 19,
+					"name": "Pick",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExternal": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "From T, pick a set of properties whose keys are in the union K"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+							"line": 1570,
+							"character": 5
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 20,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							}
+						},
+						{
+							"id": 21,
+							"name": "K",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							},
+							"type": {
+								"type": "typeOperator",
+								"operator": "keyof",
+								"target": {
+									"type": "reference",
+									"id": 20,
+									"name": "T",
+									"qualifiedName": "T",
+									"package": "typescript"
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "mapped",
+						"parameter": "P",
+						"parameterType": {
+							"type": "reference",
+							"id": 21,
+							"name": "K",
+							"qualifiedName": "K",
+							"package": "typescript"
+						},
+						"templateType": {
+							"type": "indexedAccess",
+							"indexType": {
+								"type": "reference",
+								"name": "P",
+								"qualifiedName": "P",
+								"package": "typescript"
+							},
+							"objectType": {
+								"type": "reference",
+								"id": 20,
+								"name": "T",
+								"qualifiedName": "T",
+								"package": "typescript"
+							}
+						}
+					}
+				},
+				{
+					"id": 38,
+					"name": "ReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExternal": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Obtain the return type of a function type"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+							"line": 1614,
+							"character": 5
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 45,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {
+								"isExternal": true
+							},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 42,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExternal": true
+									},
+									"sources": [
+										{
+											"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+											"line": 1614,
+											"character": 26
+										}
+									],
+									"signatures": [
+										{
+											"id": 43,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {
+												"isExternal": true
+											},
+											"parameters": [
+												{
+													"id": 44,
+													"name": "args",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isExternal": true,
+														"isRest": true
+													},
+													"type": {
+														"type": "intrinsic",
+														"name": "any"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"type": {
+						"type": "conditional",
+						"checkType": {
+							"type": "reference",
+							"id": 45,
+							"name": "T",
+							"qualifiedName": "T",
+							"package": "typescript"
+						},
+						"extendsType": {
+							"type": "reflection",
+							"declaration": {
+								"id": 39,
+								"name": "__type",
+								"kind": 65536,
+								"kindString": "Type literal",
+								"flags": {
+									"isExternal": true
+								},
+								"sources": [
+									{
+										"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+										"line": 1614,
+										"character": 61
+									}
+								],
+								"signatures": [
+									{
+										"id": 40,
+										"name": "__type",
+										"kind": 4096,
+										"kindString": "Call signature",
+										"flags": {
+											"isExternal": true
+										},
+										"parameters": [
+											{
+												"id": 41,
+												"name": "args",
+												"kind": 32768,
+												"kindString": "Parameter",
+												"flags": {
+													"isExternal": true,
+													"isRest": true
+												},
+												"type": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										],
+										"type": {
+											"type": "inferred",
+											"name": "R"
+										}
+									}
+								]
+							}
+						},
+						"trueType": {
+							"type": "reference",
+							"name": "R",
+							"qualifiedName": "R",
+							"package": "typescript"
+						},
+						"falseType": {
+							"type": "intrinsic",
+							"name": "any"
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"children": [
+						12,
+						15
+					]
+				},
+				{
+					"title": "Type Aliases",
+					"children": [
+						33,
+						46,
+						22,
+						25,
+						19,
+						38
+					]
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "T1",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 14,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"id": 12,
+						"name": "A"
+					},
+					{
+						"type": "reference",
+						"id": 15,
+						"name": "B"
+					}
+				]
+			}
+		},
+		{
+			"id": 10,
+			"name": "T10",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 24,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "indexedAccess",
+				"indexType": {
+					"type": "literal",
+					"value": "b3"
+				},
+				"objectType": {
+					"type": "reference",
+					"id": 15,
+					"name": "B"
+				}
+			}
+		},
+		{
+			"id": 2,
+			"name": "T2",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 15,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reference",
+				"id": 19,
+				"typeArguments": [
+					{
+						"type": "reference",
+						"id": 15,
+						"name": "B"
+					},
+					{
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "b1"
+							},
+							{
+								"type": "literal",
+								"value": "b2"
+							}
+						]
+					}
+				],
+				"name": "Pick",
+				"qualifiedName": "Pick",
+				"package": "typescript"
+			}
+		},
+		{
+			"id": 3,
+			"name": "T3",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 16,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reference",
+				"id": 22,
+				"typeArguments": [
+					{
+						"type": "reference",
+						"id": 15,
+						"name": "B"
+					},
+					{
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "b1"
+							},
+							{
+								"type": "literal",
+								"value": "b2"
+							}
+						]
+					}
+				],
+				"name": "Omit",
+				"qualifiedName": "Omit",
+				"package": "typescript"
+			}
+		},
+		{
+			"id": 4,
+			"name": "T4",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 18,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reference",
+				"id": 25,
+				"typeArguments": [
+					{
+						"type": "reference",
+						"id": 33,
+						"name": "C"
+					}
+				],
+				"name": "Parameters",
+				"qualifiedName": "Parameters",
+				"package": "typescript"
+			}
+		},
+		{
+			"id": 5,
+			"name": "T5",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 19,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "reference",
+				"id": 38,
+				"typeArguments": [
+					{
+						"type": "reference",
+						"id": 33,
+						"name": "C"
+					}
+				],
+				"name": "ReturnType",
+				"qualifiedName": "ReturnType",
+				"package": "typescript"
+			}
+		},
+		{
+			"id": 6,
+			"name": "T6",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 20,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "indexedAccess",
+				"indexType": {
+					"type": "literal",
+					"value": 0
+				},
+				"objectType": {
+					"type": "reference",
+					"id": 4,
+					"name": "T4"
+				}
+			}
+		},
+		{
+			"id": 7,
+			"name": "T7",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 21,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "tuple",
+				"elements": [
+					{
+						"type": "intrinsic",
+						"name": "string"
+					},
+					{
+						"type": "intrinsic",
+						"name": "number"
+					},
+					{
+						"type": "reference",
+						"id": 15,
+						"name": "B"
+					}
+				]
+			}
+		},
+		{
+			"id": 8,
+			"name": "T8",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 22,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "array",
+				"elementType": {
+					"type": "intrinsic",
+					"name": "number"
+				}
+			}
+		},
+		{
+			"id": 9,
+			"name": "T9",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "src/typedoc/UtilityTypes.ts",
+					"line": 23,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "indexedAccess",
+				"indexType": {
+					"type": "literal",
+					"value": "b2"
+				},
+				"objectType": {
+					"type": "reference",
+					"id": 15,
+					"name": "B"
+				}
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"children": [
+				11
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				1,
+				10,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "src/typedoc/UtilityTypes.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}
