@@ -1,8 +1,8 @@
 import { pick } from "lodash"
 import parse from "../src/parse"
 
-test('Parse', () => {
-    const data = parse({
+test('Parse', async () => {
+    const data = await parse({
         entryFile: '__tests__/parse/simple.ts',
         resolveDir: '/Users/guozile/Documents/Code/umi-plugin-dumi-api-parser'
     })

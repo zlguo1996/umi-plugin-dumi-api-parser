@@ -1,10 +1,10 @@
-import { execSync } from "child_process";
-import { readJsonSync, removeSync } from "fs-extra";
+import { exec, execSync } from "child_process";
+import { readJson, readJsonSync, remove, removeSync } from "fs-extra";
 import path from "path";
 import extractDoc from "./extractDoc";
 import { checkUniqueIds, flatChildrenList, getIdMap } from "./utils";
 
-export default function parse({
+export default async function parse({
     entryFile,
     resolveDir,
 }: {
@@ -12,9 +12,18 @@ export default function parse({
     resolveDir: string;
 }) {
     const jsonPath = './typedoc.tmp.json'
-    execSync(`typedoc --entryPoints ${path.join(resolveDir, entryFile)} --json ${jsonPath}`)
-    const definition = readJsonSync(jsonPath)
-    removeSync(jsonPath)
+    await new Promise((resolve, reject) => {
+        exec(
+            `typedoc --entryPoints ${path.join(resolveDir, entryFile)} --json ${jsonPath}`,
+            (err, stdout, stderr) => {
+                if (err) {
+                    reject(err)
+                }
+                resolve(stdout)
+            })
+    })
+    const definition = await readJson(jsonPath)
+    await remove(jsonPath)
 
     const list = flatChildrenList(definition.children);
     checkUniqueIds(list);
