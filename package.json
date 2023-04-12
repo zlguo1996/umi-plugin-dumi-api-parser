@@ -1,7 +1,7 @@
 {
   "name": "umi-plugin-dumi-api-parser",
   "author": "Guo Zile <zlguo1996@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
   "scripts": {
@@ -34,9 +34,9 @@
     "umi": "^4.0.64"
   },
   "dependencies": {
+    "fs-extra": "^11.1.1",
     "lodash": "^4.17.21",
     "typedoc": "^0.23.28",
-    "typedoc-plugin-missing-exports": "^1.0.0",
-    "fs-extra": "^11.1.1"
+    "typedoc-plugin-missing-exports": "^1.0.0"
   }
 }
