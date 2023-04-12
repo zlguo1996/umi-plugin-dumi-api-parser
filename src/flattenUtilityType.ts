@@ -7,7 +7,7 @@ function resolveReference(item: any, ref: Map<any, any>): any {
     if (item.type === 'reflection' && item.declaration) {
         return resolveReference(item.declaration, ref)
     }
-    if (item.kindString === 'Type literal' && item.signatures.length === 1) {
+    if (item.kindString === 'Type literal' && item.signatures?.length === 1) {
         return resolveReference(item.signatures[0], ref)
     }
     if (item.kindString === 'Type alias') {

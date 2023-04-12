@@ -22,7 +22,7 @@ export default function stringifyType(itemRaw: any, ref: Map<any, any>): string 
         case 'Interface':
             return `{${item.children.map((i: any) => stringifyType(i, ref)).join('; ')}}`
         case 'Call signature':
-            return `function ${item.name}(${item.parameters.map((i: any) => stringifyType(i, ref)).join(', ')}): ${stringifyType(item.type, ref)}`
+            return `function ${item.name}(${(item.parameters || []).map((i: any) => stringifyType(i, ref)).join(', ')}): ${stringifyType(item.type, ref)}`
         case 'Parameter':
             return `${item.name}: ${stringifyType(item.type, ref)}`
         case 'Property':

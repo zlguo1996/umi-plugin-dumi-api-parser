@@ -8,21 +8,31 @@ import parse from './parse';
 
 const API_META_PATH = 'dumi/meta/apiParserEnhanced.ts'
 
-export { parse }
-
 export default (api: IApi) => {
-  let prevData: Awaited<any>;
+  console.log('>>> load plugin apiParserEnhanced')
+
+  let prevData: any = null;
   const writeApiMetaFile = (data: typeof prevData) => {
     api.writeTmpFile({
       noPluginDir: true,
       path: API_META_PATH,
-      content: `export const apiParserEnhanced = ${JSON.stringify(
-        data.components,
+      content: `export const apiParserEnhanced = ${data ? JSON.stringify(
+        data,
         null,
         2,
-      )};`,
+      ) : null};`,
     });
   };
+
+  /** 添加api信息文件依赖 */
+  api.addEntryImports(() => ({
+    source: `./${API_META_PATH}`,
+    specifier: '{ apiParserEnhanced }'
+  }))
+  api.addEntryCode(() =>
+    `console.log('>>> data', apiParserEnhanced)`
+  )
+
 
   api.describe({
     key: 'apiParserEnhanced',
@@ -30,6 +40,7 @@ export default (api: IApi) => {
     config: {
       schema: (Joi) =>
         Joi.object({
+          debug: Joi.boolean(),
         }),
     },
   });
@@ -70,13 +81,16 @@ export default (api: IApi) => {
       const data = await parse({
         entryFile: api.config.resolve.entryFile!,
         resolveDir: api.cwd,
+        preserveTmpFile: api.config.apiParserEnhanced.debug,
       })
       prevData = data
+      console.log('>>> writeApiMetaFile')
       writeApiMetaFile(data);
     }
   });
 
   api.onGenerateFiles(async () => {
+    console.log('>>> onGenerateFiles')
     if (api.env === 'production') {
       // sync parse in production
       writeApiMetaFile(await parse({
@@ -84,6 +98,7 @@ export default (api: IApi) => {
         resolveDir: api.cwd,
       }));
     } else if (prevData) {
+      console.log('>>> writeApiMetaFile')
       // also write prev data when re-generate files in development
       writeApiMetaFile(prevData);
     }
