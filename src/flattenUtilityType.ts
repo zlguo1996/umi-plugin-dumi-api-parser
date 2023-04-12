@@ -1,7 +1,7 @@
 import { flatten, merge } from "lodash"
-import { withStack } from "./utils"
+import { Stack, withStack } from "./utils"
 
-function resolveReferenceInner(item: any, ref: Map<any, any>, stack: Set<number>): any {
+function resolveReferenceInner(item: any, ref: Map<any, any>, stack: Stack): any {
     if (item.type === 'reference' && item.package !== 'typescript' && ref.get(item.id)) {
         return resolveReference(ref.get(item.id), ref, stack)
     }
@@ -17,7 +17,7 @@ function resolveReferenceInner(item: any, ref: Map<any, any>, stack: Set<number>
     return item
 }
 
-const resolveReference = withStack(resolveReferenceInner, 10)
+const resolveReference = withStack(resolveReferenceInner, { uniqueId: false })
 
 /**
  * 将嵌套的引用结构 & Utility Types（e.g. Pick） 展开成简单的更加易于阅读的结构
@@ -26,7 +26,7 @@ const resolveReference = withStack(resolveReferenceInner, 10)
  * @param ref 
  * @returns 
  */
-function flattenUtilityTypeInner(item: any, ref: Map<any, any>, stack: Set<number>): any {
+function flattenUtilityTypeInner(item: any, ref: Map<any, any>, stack: Stack): any {
     const itemReal = resolveReference(item, ref, new Set())
 
     // 基础类型子类型简化
@@ -167,6 +167,6 @@ function flattenUtilityTypeInner(item: any, ref: Map<any, any>, stack: Set<numbe
     return itemReal
 }
 
-const flattenUtilityType = withStack(flattenUtilityTypeInner, 10)
+const flattenUtilityType = withStack(flattenUtilityTypeInner, { uniqueId: true })
 
 export default flattenUtilityType

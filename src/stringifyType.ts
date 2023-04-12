@@ -1,6 +1,7 @@
 import flattenUtilityType from "./flattenUtilityType"
+import { Stack } from "./utils"
 
-export default function stringifyType(itemRaw: any, ref: Map<any, any>, stack: Set<number>): string {
+export default function stringifyType(itemRaw: any, ref: Map<any, any>, stack: Stack): string {
     if (itemRaw.id && stack.has(itemRaw.id)) {
         return itemRaw.qualifiedName || itemRaw.name
     }
