@@ -2,8 +2,8 @@ import flattenUtilityType from "./flattenUtilityType";
 import stringifyType from "./stringifyType";
 
 function extracDocForType(item: any, ref: Map<any, any>) {
-    const typeString = stringifyType(item, ref)
-    const shallowFlattened = flattenUtilityType(item, ref)
+    const typeString = stringifyType(item, ref, new Set())
+    const shallowFlattened = flattenUtilityType(item, ref, new Set())
 
     return {
         /** 格式化类型为字符串 */
@@ -26,7 +26,12 @@ export default function extractDoc(item: any, ref: Map<any, any>) {
             /** 名称 */
             name: item.name,
             /** 参数类型 */
-            parameters: signature.parameters.map((item: any) => extracDocForType(item, ref)),
+            parameters: signature.parameters.map((item: any) => ({
+                ...extracDocForType(item.type, ref),
+                name: item.name,
+                default: item.defaultValue,
+                description: item.comment?.summary?.map((i: any) => i.text).join(''),
+            })),
             /** 返回类型 */
             returns: extracDocForType(signature.type, ref),
         }

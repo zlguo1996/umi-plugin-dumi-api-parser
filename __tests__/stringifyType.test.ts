@@ -1,11 +1,12 @@
 import { readJsonSync } from 'fs-extra';
-import extractDoc from '../src/extractDoc';
+import stringifyType from '../src/stringifyType';
 import { checkUniqueIds, flatChildrenList, getIdMap } from '../src/utils';
 import { compressJson, generateDefinition, generateExpect } from './typedocUtils';
 
 const fileNames = [
+    'BasicTypes',
     'UtilityTypes',
-    'Functions'
+    'Functions',
 ]
 for (const fileName of fileNames) {
     generateDefinition(fileName)
@@ -23,7 +24,7 @@ for (const fileName of fileNames) {
             if (!/T\d+/.test(item.name)) continue;
             test(item.name, () => {
                 expect(
-                    compressJson(extractDoc(item, map).typeString)
+                    compressJson(stringifyType(item, map, new Set()))
                 ).toBe(
                     compressJson(expectation[item.name])
                 )

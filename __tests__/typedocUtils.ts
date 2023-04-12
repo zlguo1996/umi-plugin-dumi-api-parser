@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
 import { writeJson } from 'fs-extra';
-import extractDoc from '../src/extractDoc';
+import stringifyType from '../src/stringifyType';
 import { checkUniqueIds, flatChildrenList, getIdMap } from '../src/utils';
 
 export function generateDefinition(fileName: string) {
@@ -20,7 +20,7 @@ export async function generateExpect(fileName: string) {
     const res: any = {}
     for (const [key, item] of map) {
         if (!/T\d+/.test(item.name)) continue;
-        res[item.name] = extractDoc(item, map).typeString
+        res[item.name] = stringifyType(item, map, new Set())
     }
     await writeJson(`./__tests__/typedoc/${fileName}.expect.json`, res, { spaces: 4 })
 }

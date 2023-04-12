@@ -1,0 +1,80 @@
+{
+	"id": 0,
+	"name": "umi-plugin-dumi-api-parser",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "T01",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "BasicTypes.ts",
+					"line": 1,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": "1"
+					},
+					{
+						"type": "literal",
+						"value": "2"
+					}
+				]
+			}
+		},
+		{
+			"id": 2,
+			"name": "T02",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "BasicTypes.ts",
+					"line": 2,
+					"character": 12
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": 1
+					},
+					{
+						"type": "literal",
+						"value": 2
+					}
+				]
+			}
+		}
+	],
+	"groups": [
+		{
+			"title": "Type Aliases",
+			"children": [
+				1,
+				2
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "BasicTypes.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}

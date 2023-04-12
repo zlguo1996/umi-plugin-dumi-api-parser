@@ -1,20 +1,23 @@
 import { flatten, merge } from "lodash"
+import { withStack } from "./utils"
 
-function resolveReference(item: any, ref: Map<any, any>): any {
+function resolveReferenceInner(item: any, ref: Map<any, any>, stack: Set<number>): any {
     if (item.type === 'reference' && item.package !== 'typescript' && ref.get(item.id)) {
-        return resolveReference(ref.get(item.id), ref)
+        return resolveReference(ref.get(item.id), ref, stack)
     }
     if (item.type === 'reflection' && item.declaration) {
-        return resolveReference(item.declaration, ref)
+        return resolveReference(item.declaration, ref, stack)
     }
     if (item.kindString === 'Type literal' && item.signatures?.length === 1) {
-        return resolveReference(item.signatures[0], ref)
+        return resolveReference(item.signatures[0], ref, stack)
     }
     if (item.kindString === 'Type alias') {
-        return resolveReference(item.type, ref)
+        return resolveReference(item.type, ref, stack)
     }
     return item
 }
+
+const resolveReference = withStack(resolveReferenceInner, 10)
 
 /**
  * 将嵌套的引用结构 & Utility Types（e.g. Pick） 展开成简单的更加易于阅读的结构
@@ -23,28 +26,31 @@ function resolveReference(item: any, ref: Map<any, any>): any {
  * @param ref 
  * @returns 
  */
-function flattenUtilityType(item: any, ref: Map<any, any>): any {
-    const itemReal = resolveReference(item, ref)
+function flattenUtilityTypeInner(item: any, ref: Map<any, any>, stack: Set<number>): any {
+    const itemReal = resolveReference(item, ref, new Set())
 
     // 基础类型子类型简化
     if (itemReal.kindString === 'Parameter' || itemReal.kindString === 'Property') {
-        return merge(itemReal, { type: flattenUtilityType(itemReal.type, ref) })
+        return {
+            ...itemReal,
+            type: flattenUtilityType(itemReal.type, ref, stack)
+        }
     }
     if (itemReal.type === 'indexedAccess') {
         const isNumberIndex = itemReal.indexType.type === 'literal' && typeof itemReal.indexType.value === 'number'
         const isStringIndex = itemReal.indexType.type === 'literal' && typeof itemReal.indexType.value === 'string'
-        const object = flattenUtilityType(itemReal.objectType, ref)
+        const object = flattenUtilityType(itemReal.objectType, ref, stack)
 
         if (isNumberIndex && object.type === 'array') {
-            return flattenUtilityType(object.elementType, ref)
+            return flattenUtilityType(object.elementType, ref, stack)
         }
         if (isNumberIndex && object.type === 'tuple') {
-            return flattenUtilityType(object.elements[itemReal.indexType.value], ref)
+            return flattenUtilityType(object.elements[itemReal.indexType.value], ref, stack)
         }
         if (isStringIndex && object.kindString === 'Interface') {
             const property = object.children.find((property: any) => property.name === itemReal.indexType.value)
             if (property) {
-                const propertyType = flattenUtilityType(property.type, ref)
+                const propertyType = flattenUtilityType(property.type, ref, stack)
                 if (property.flags.isOptional) {
                     return {
                         "type": "union",
@@ -64,7 +70,7 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
 
     // Interface 类型简化
     if (itemReal.type === 'intersection') {
-        const types = itemReal.types.map((type: any) => resolveReference(type, ref))
+        const types = itemReal.types.map((type: any) => flattenUtilityType(type, ref, stack))
         const typesAreInterfaces = types.every((type: any) => type.kindString === 'Interface')
         if (typesAreInterfaces) {
             return {
@@ -73,34 +79,48 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
                 children: flatten(types.map((type: any) => type.children))
             }
         }
+        return {
+            ...itemReal,
+            types,
+        }
     }
 
-    if (itemReal.type === 'reference' && itemReal.package === 'typescript' && itemReal.typeArguments.length) {
-        const typeArguments = itemReal.typeArguments.map((type: any) => resolveReference(type, ref))
+    if (itemReal.type === 'reference' && itemReal.package === 'typescript' && itemReal.typeArguments?.length) {
+        const typeArguments = itemReal.typeArguments.map((type: any) => flattenUtilityType(type, ref, stack))
 
         // Interface 类型简化
         const firstTypeArgumentIsInterface = typeArguments[0].kindString === 'Interface'
         const secondTypeArgumentIsUnion = typeArguments[1]?.type === 'union'
-        if (itemReal.name === 'Pick' && firstTypeArgumentIsInterface && secondTypeArgumentIsUnion) {
+        const secondTypeArgumentIsLiteral = typeArguments[1]?.type === 'literal'
+        let secondTypeLiteralList: (string | number)[] = []
+        if (secondTypeArgumentIsUnion) {
+            secondTypeLiteralList = typeArguments[1].types.map((c: any) => c.value)
+        } else if (secondTypeArgumentIsLiteral) {
+            secondTypeLiteralList = [typeArguments[1].value]
+        }
+
+        if (itemReal.name === 'Pick' && firstTypeArgumentIsInterface && (secondTypeArgumentIsUnion || secondTypeArgumentIsLiteral)) {
             return {
                 "kind": 256,
                 "kindString": "Interface",
-                children: typeArguments[0].children.filter((child: any) => typeArguments[1].types.map((c: any) => c.value).includes(child.name)).map(
-                    (child: any) => {
-                        return flattenUtilityType(child, ref)
-                    }
-                )
+                children: typeArguments[0].children.filter(
+                    (child: any) => secondTypeLiteralList.includes(child.name)).map(
+                        (child: any) => {
+                            return flattenUtilityType(child, ref, stack)
+                        }
+                    )
             }
         }
-        if (itemReal.name === 'Omit' && firstTypeArgumentIsInterface && secondTypeArgumentIsUnion) {
+        if (itemReal.name === 'Omit' && firstTypeArgumentIsInterface && (secondTypeArgumentIsUnion || secondTypeArgumentIsLiteral)) {
             return {
                 "kind": 256,
                 "kindString": "Interface",
-                children: typeArguments[0].children.filter((child: any) => !typeArguments[1].types.map((c: any) => c.value).includes(child.name)).map(
-                    (child: any) => {
-                        return flattenUtilityType(child, ref)
-                    }
-                )
+                children: typeArguments[0].children.filter(
+                    (child: any) => !secondTypeLiteralList.includes(child.name)).map(
+                        (child: any) => {
+                            return flattenUtilityType(child, ref, stack)
+                        }
+                    )
             }
         }
         if (itemReal.name === 'Partial' && firstTypeArgumentIsInterface) {
@@ -108,7 +128,7 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
                 "kind": 256,
                 "kindString": "Interface",
                 children: typeArguments[0].children.map((child: any) => {
-                    return flattenUtilityType(merge(child, { flags: { isOptional: true } }), ref)
+                    return flattenUtilityType(merge(child, { flags: { isOptional: true } }), ref, stack)
                 })
             }
         }
@@ -117,7 +137,7 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
                 "kind": 256,
                 "kindString": "Interface",
                 children: typeArguments[0].children.map((child: any) => {
-                    return flattenUtilityType(merge(child, { flags: { isOptional: false } }), ref)
+                    return flattenUtilityType(merge(child, { flags: { isOptional: false } }), ref, stack)
                 })
             }
         }
@@ -127,15 +147,26 @@ function flattenUtilityType(item: any, ref: Map<any, any>): any {
         if (itemReal.name === 'Parameters' && firstTypeArgumentIsCallSignature) {
             return {
                 type: 'tuple',
-                elements: typeArguments[0].parameters.map((parameter: any) => flattenUtilityType(parameter.type, ref))
+                elements: typeArguments[0].parameters.map((parameter: any) => flattenUtilityType(parameter.type, ref, stack))
             }
         }
         if (itemReal.name === 'ReturnType' && firstTypeArgumentIsCallSignature) {
-            return flattenUtilityType(typeArguments[0].type, ref)
+            return flattenUtilityType(typeArguments[0].type, ref, stack)
         }
+
+        if (['Pick', 'Omit', 'Partial', 'Required', 'Parameters', 'ReturnType'].includes(itemReal.name)) {
+            return {
+                ...itemReal,
+                typeArguments,
+            }
+        }
+
+        return itemReal
     }
 
     return itemReal
 }
+
+const flattenUtilityType = withStack(flattenUtilityTypeInner, 10)
 
 export default flattenUtilityType
