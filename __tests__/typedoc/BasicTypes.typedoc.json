@@ -16,7 +16,8 @@
 				{
 					"fileName": "BasicTypes.ts",
 					"line": 1,
-					"character": 12
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/BasicTypes.ts#L1"
 				}
 			],
 			"type": {
@@ -43,7 +44,8 @@
 				{
 					"fileName": "BasicTypes.ts",
 					"line": 2,
-					"character": 12
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/BasicTypes.ts#L2"
 				}
 			],
 			"type": {
@@ -74,7 +76,8 @@
 		{
 			"fileName": "BasicTypes.ts",
 			"line": 1,
-			"character": 0
+			"character": 0,
+			"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/BasicTypes.ts#L1"
 		}
 	]
 }

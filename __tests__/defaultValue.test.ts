@@ -1,6 +1,6 @@
 import { readJsonSync } from "fs-extra"
 import { checkUniqueIds, flatChildrenList, getIdMap } from "../src/utils"
-import { generateDefinition, getCallSignature } from "./typedocUtils"
+import { generateDefinition } from "./typedocUtils"
 import extractDoc from '../src/extractDoc';
 
 describe('Typedoc - Default Value', () => {
@@ -20,10 +20,10 @@ describe('Typedoc - Default Value', () => {
 
     test('T01', () => {
         const item = map.get(nameMap.get('T01'))
-        const type = extractDoc(item, map).type
-        const parameters = getCallSignature(type).parameters
+        const type = extractDoc(item, map)
+
         expect(
-            parameters[0].defaultValue
+            type.parameters[0].default
         ).toBe(
             '...'   // TODO
         )
@@ -31,10 +31,10 @@ describe('Typedoc - Default Value', () => {
 
     test('T02', () => {
         const item = map.get(nameMap.get('T02'))
-        const type = extractDoc(item, map).type
-        const parameters = getCallSignature(type).parameters
+        const type = extractDoc(item, map)
+
         expect(
-            parameters[0].defaultValue
+            type.parameters[0].default
         ).toBe(
             "'1'"
         )
@@ -42,15 +42,15 @@ describe('Typedoc - Default Value', () => {
 
     test('T03', () => {
         const item = map.get(nameMap.get('T03'))
-        const type = extractDoc(item, map).type
-        const parameters = getCallSignature(type).parameters
+        const type = extractDoc(item, map)
+
         expect(
-            parameters[0].defaultValue
+            type.parameters[0].default
         ).toBe(
             undefined
         )
         expect(
-            parameters[1].defaultValue
+            type.parameters[1].default
         ).toBe(
             '...'
         )
@@ -58,15 +58,15 @@ describe('Typedoc - Default Value', () => {
 
     test('T04', () => {
         const item = map.get(nameMap.get('T04'))
-        const type = extractDoc(item, map).type
-        const parameters = getCallSignature(type).parameters
+        const type = extractDoc(item, map)
+
         expect(
-            parameters[0].defaultValue
+            type.parameters[0].default
         ).toBe(
             undefined
         )
         expect(
-            parameters[1].defaultValue
+            type.parameters[1].default
         ).toBe(
             undefined
         )
@@ -74,15 +74,15 @@ describe('Typedoc - Default Value', () => {
 
     test('T05', () => {
         const item = map.get(nameMap.get('T05'))
-        const type = extractDoc(item, map).type
-        const parameters = getCallSignature(type).parameters
+        const type = extractDoc(item, map)
+
         expect(
-            parameters[0].defaultValue
+            type.parameters[0].default
         ).toBe(
             undefined
         )
         expect(
-            parameters[1].defaultValue
+            type.parameters[1].default
         ).toBe(
             undefined
         )

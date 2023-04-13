@@ -24,17 +24,3 @@ export async function generateExpect(fileName: string) {
     }
     await writeJson(`./__tests__/typedoc/${fileName}.expect.json`, res, { spaces: 4 })
 }
-
-export function getCallSignature(item: any) {
-    if (item.kindString === 'Call signature') {
-        return item
-    }
-    if (item.kindString === 'Function') {
-        return item.signatures[0]
-    }
-    throw new Error('Not a function')
-}
-
-export function getCallSignatureReturnComment(callSignature: any) {
-    return callSignature.comment?.blockTags?.find?.((item: any) => item.tag === '@returns')?.content
-}

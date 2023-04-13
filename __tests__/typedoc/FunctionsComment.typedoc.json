@@ -30,7 +30,8 @@
 								{
 									"fileName": "FunctionsComment.ts",
 									"line": 2,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L2"
 								}
 							],
 							"type": {
@@ -48,7 +49,8 @@
 								{
 									"fileName": "FunctionsComment.ts",
 									"line": 3,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L3"
 								}
 							],
 							"type": {
@@ -70,7 +72,8 @@
 						{
 							"fileName": "FunctionsComment.ts",
 							"line": 1,
-							"character": 10
+							"character": 10,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L1"
 						}
 					]
 				}
@@ -94,7 +97,8 @@
 				{
 					"fileName": "FunctionsComment.ts",
 					"line": 15,
-					"character": 12
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L15"
 				}
 			],
 			"type": {
@@ -116,7 +120,8 @@
 								{
 									"fileName": "FunctionsComment.ts",
 									"line": 16,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L16"
 								}
 							],
 							"type": {
@@ -137,7 +142,8 @@
 						{
 							"fileName": "FunctionsComment.ts",
 							"line": 15,
-							"character": 18
+							"character": 18,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L15"
 						}
 					],
 					"signatures": [
@@ -225,7 +231,8 @@
 				{
 					"fileName": "FunctionsComment.ts",
 					"line": 11,
-					"character": 16
+					"character": 16,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L11"
 				}
 			],
 			"signatures": [
@@ -309,7 +316,8 @@
 		{
 			"fileName": "FunctionsComment.ts",
 			"line": 1,
-			"character": 0
+			"character": 0,
+			"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsComment.ts#L1"
 		}
 	]
 }

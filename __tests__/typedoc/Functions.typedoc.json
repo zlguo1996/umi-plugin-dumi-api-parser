@@ -17,7 +17,7 @@
 					"fileName": "Functions.ts",
 					"line": 1,
 					"character": 12,
-					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/6834a67/__tests__/typedoc/Functions.ts#L1"
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/Functions.ts#L1"
 				}
 			],
 			"type": {
@@ -40,7 +40,7 @@
 									"fileName": "Functions.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/6834a67/__tests__/typedoc/Functions.ts#L2"
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/Functions.ts#L2"
 								}
 							],
 							"type": {
@@ -62,7 +62,7 @@
 							"fileName": "Functions.ts",
 							"line": 1,
 							"character": 18,
-							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/6834a67/__tests__/typedoc/Functions.ts#L1"
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/Functions.ts#L1"
 						}
 					],
 					"signatures": [
@@ -108,7 +108,7 @@
 			"fileName": "Functions.ts",
 			"line": 1,
 			"character": 0,
-			"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/6834a67/__tests__/typedoc/Functions.ts#L1"
+			"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/Functions.ts#L1"
 		}
 	]
 }

@@ -1,23 +1,6 @@
 import { flatten, merge } from "lodash"
+import resolveReference from "./resolveReference"
 import { Stack, withStack } from "./utils"
-
-function resolveReferenceInner(item: any, ref: Map<any, any>, stack: Stack): any {
-    if (item.type === 'reference' && item.package !== 'typescript' && ref.get(item.id)) {
-        return resolveReference(ref.get(item.id), ref, stack)
-    }
-    if (item.type === 'reflection' && item.declaration) {
-        return resolveReference(item.declaration, ref, stack)
-    }
-    if (item.kindString === 'Type literal' && item.signatures?.length === 1) {
-        return resolveReference(item.signatures[0], ref, stack)
-    }
-    if (item.kindString === 'Type alias') {
-        return resolveReference(item.type, ref, stack)
-    }
-    return item
-}
-
-const resolveReference = withStack(resolveReferenceInner, { uniqueId: false })
 
 /**
  * 将嵌套的引用结构 & Utility Types（e.g. Pick） 展开成简单的更加易于阅读的结构

@@ -1,14 +1,10 @@
-import { pick } from "lodash"
+import { cwd } from "process"
 import parse from "../src/parse"
 
 test('Parse', async () => {
     const data = await parse({
         entryFile: '__tests__/parse/simple.ts',
-        resolveDir: '/Users/guozile/Documents/Code/umi-plugin-dumi-api-parser'
+        resolveDir: cwd(),
     })
-    expect(data.map((item: any) => pick(item, ['typeString']))).toMatchObject([
-        {
-            typeString: '{a: number; b: string}',
-        }
-    ])
+    expect(data.T01.parameters[0].typeString).toBe('{a1: number; a2: string}')
 })

@@ -1,6 +1,6 @@
 import { readJsonSync } from "fs-extra"
 import { checkUniqueIds, flatChildrenList, getIdMap } from "../src/utils"
-import { generateDefinition, getCallSignature, getCallSignatureReturnComment } from "./typedocUtils"
+import { generateDefinition } from "./typedocUtils"
 import extractDoc from '../src/extractDoc';
 
 describe('Typedoc - Comment', () => {
@@ -20,10 +20,9 @@ describe('Typedoc - Comment', () => {
 
     test('T01', () => {
         const item = map.get(nameMap.get('T01'))
-        const type = extractDoc(item, map).type
-        const f = getCallSignature(type)
+        const type = extractDoc(item, map)
         expect(
-            f.comment.summary
+            type.description
         ).toMatchObject(
             [
                 {
@@ -33,7 +32,7 @@ describe('Typedoc - Comment', () => {
             ]
         )
         expect(
-            f.parameters[0].comment.summary
+            type.parameters[0].description
         ).toMatchObject(
             [
                 {
@@ -43,7 +42,7 @@ describe('Typedoc - Comment', () => {
             ]
         )
         expect(
-            getCallSignatureReturnComment(f)
+            type.returns?.description
         ).toMatchObject(
             [
                 {
@@ -56,10 +55,9 @@ describe('Typedoc - Comment', () => {
 
     test('T02', () => {
         const item = map.get(nameMap.get('T02'))
-        const type = extractDoc(item, map).type
-        const f = getCallSignature(type)
+        const type = extractDoc(item, map)
         expect(
-            f.comment.summary
+            type.description
         ).toMatchObject(
             [
                 {
@@ -69,7 +67,7 @@ describe('Typedoc - Comment', () => {
             ]
         )
         expect(
-            f.parameters[0].comment.summary
+            type.parameters[0].description
         ).toMatchObject(
             [
                 {
@@ -79,7 +77,7 @@ describe('Typedoc - Comment', () => {
             ]
         )
         expect(
-            f.parameters[1].comment.summary
+            type.parameters[1].description
         ).toMatchObject(
             [
                 {
@@ -89,7 +87,7 @@ describe('Typedoc - Comment', () => {
             ]
         )
         expect(
-            getCallSignatureReturnComment(f)
+            type.returns?.description
         ).toMatchObject(
             [
                 {

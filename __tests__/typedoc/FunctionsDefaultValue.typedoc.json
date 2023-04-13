@@ -30,7 +30,8 @@
 								{
 									"fileName": "FunctionsDefaultValue.ts",
 									"line": 2,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L2"
 								}
 							],
 							"type": {
@@ -48,7 +49,8 @@
 								{
 									"fileName": "FunctionsDefaultValue.ts",
 									"line": 3,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L3"
 								}
 							],
 							"type": {
@@ -70,7 +72,8 @@
 						{
 							"fileName": "FunctionsDefaultValue.ts",
 							"line": 1,
-							"character": 10
+							"character": 10,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L1"
 						}
 					]
 				}
@@ -94,7 +97,8 @@
 				{
 					"fileName": "FunctionsDefaultValue.ts",
 					"line": 33,
-					"character": 12
+					"character": 12,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L33"
 				}
 			],
 			"type": {
@@ -116,7 +120,8 @@
 								{
 									"fileName": "FunctionsDefaultValue.ts",
 									"line": 34,
-									"character": 4
+									"character": 4,
+									"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L34"
 								}
 							],
 							"type": {
@@ -137,7 +142,8 @@
 						{
 							"fileName": "FunctionsDefaultValue.ts",
 							"line": 33,
-							"character": 18
+							"character": 18,
+							"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L33"
 						}
 					],
 					"signatures": [
@@ -190,7 +196,8 @@
 				{
 					"fileName": "FunctionsDefaultValue.ts",
 					"line": 6,
-					"character": 16
+					"character": 16,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L6"
 				}
 			],
 			"signatures": [
@@ -233,7 +240,8 @@
 				{
 					"fileName": "FunctionsDefaultValue.ts",
 					"line": 12,
-					"character": 16
+					"character": 16,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L12"
 				}
 			],
 			"signatures": [
@@ -274,7 +282,8 @@
 				{
 					"fileName": "FunctionsDefaultValue.ts",
 					"line": 15,
-					"character": 16
+					"character": 16,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L15"
 				}
 			],
 			"signatures": [
@@ -327,7 +336,8 @@
 				{
 					"fileName": "FunctionsDefaultValue.ts",
 					"line": 29,
-					"character": 16
+					"character": 16,
+					"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L29"
 				}
 			],
 			"signatures": [
@@ -397,7 +407,8 @@
 		{
 			"fileName": "FunctionsDefaultValue.ts",
 			"line": 1,
-			"character": 0
+			"character": 0,
+			"url": "https://github.com/zlguo1996/umi-plugin-dumi-api-parser/blob/93d2b0b/__tests__/typedoc/FunctionsDefaultValue.ts#L1"
 		}
 	]
 }

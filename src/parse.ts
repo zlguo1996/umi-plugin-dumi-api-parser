@@ -38,7 +38,6 @@ export default async function parse({
             'Module', 'Namespace' // 过滤不会展示在文档中的内容
         ].includes(item.kindString)
     ).map((item: any) => {
-        console.log('>>> parse', item.name)
         return extractDoc(item, map)
     })
 
