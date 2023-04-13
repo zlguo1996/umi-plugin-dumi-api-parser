@@ -30,7 +30,7 @@ export default (api: IApi) => {
     specifier: '{ apiParserEnhanced }'
   }))
   api.addEntryCode(() =>
-    `console.log('>>> data', apiParserEnhanced)`
+    `window.apiParserEnhanced = apiParserEnhanced;`
   )
 
 
