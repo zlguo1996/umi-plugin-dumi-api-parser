@@ -1,4 +1,5 @@
 import flattenUtilityType from "./flattenUtilityType"
+import resolveReference from "./resolveReference"
 import { Stack } from "./utils"
 
 export default function stringifyType(itemRaw: any, ref: Map<any, any>, stack: Stack): string {
@@ -12,9 +13,21 @@ export default function stringifyType(itemRaw: any, ref: Map<any, any>, stack: S
         const item = flattenUtilityType(itemRaw, ref, new Set())
         switch (item.type) {
             case 'intersection':
-                return item.types.map((i: any) => stringifyType(i, ref, stack)).join(' & ')
+                return item.types.map((i: any) => {
+                    const content = stringifyType(i, ref, stack)
+                    if (resolveReference(i, ref, new Set()).kindString === 'Call signature') {
+                        return `(${content})`
+                    }
+                    return content
+                }).join(' & ')
             case 'union':
-                return item.types.map((i: any) => stringifyType(i, ref, stack)).join(' | ')
+                return item.types.map((i: any) => {
+                    const content = stringifyType(i, ref, stack)
+                    if (resolveReference(i, ref, new Set()).kindString === 'Call signature') {
+                        return `(${content})`
+                    }
+                    return content
+                }).join(' | ')
             case 'literal':
                 return typeof item.value === 'number' ? `${item.value}` : `'${item.value}'`
             case 'intrinsic':
@@ -30,7 +43,7 @@ export default function stringifyType(itemRaw: any, ref: Map<any, any>, stack: S
             case 'Interface':
                 return `{${(item.children || []).map((i: any) => stringifyType(i, ref, stack)).join('; ')}}`
             case 'Call signature':
-                return `function ${item.name}(${(item.parameters || []).map((i: any) => stringifyType(i, ref, stack)).join(', ')}): ${stringifyType(item.type, ref, stack)}`
+                return `(${(item.parameters || []).map((i: any) => stringifyType(i, ref, stack)).join(', ')}) => ${stringifyType(item.type, ref, stack)}`
             case 'Parameter':
                 return `${item.name}: ${stringifyType(item.type, ref, stack)}`
             case 'Property':
