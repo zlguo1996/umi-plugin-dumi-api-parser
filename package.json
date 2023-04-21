@@ -1,7 +1,7 @@
 {
   "name": "umi-plugin-dumi-api-parser",
   "author": "Guo Zile <zlguo1996@gmail.com>",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
   "scripts": {
