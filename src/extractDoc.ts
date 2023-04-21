@@ -29,7 +29,7 @@ export default function extractDoc(itemRaw: any, ref: Map<any, any>) {
             /** 注释 */
             description: signature.comment?.summary,
             /** 参数类型 */
-            parameters: signature.parameters.map((item: any) => ({
+            parameters: (signature.parameters || []).map((item: any) => ({
                 ...extracDocForType(item.type, ref),
                 name: item.name,
                 default: item.defaultValue,
